@@ -90,7 +90,9 @@ jobs:
           token: ${{ secrets.RCORE_2025_SPRING_TOKEN }}
         run: |
           score=$(( $(grep -o 'ch' classroom/latest.json | wc -l) * 100))
+          echo "before cat"
           cat classroom/latest.json
+          echo "end cat"
           echo $score
 
           github_user="${{ github.actor }}"
