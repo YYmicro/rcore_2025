@@ -60,7 +60,7 @@ jobs:
           cat output.txt | grep -a "Test passed" | grep -oP "\d{1,}/\d{1,}" | xargs -i echo "points={}"
           cat output.txt | grep -a "Test passed" | grep -oP "\d{1,}/\d{1,}" | xargs -i echo "points={}" >> $GITHUB_OUTPUT
   deploy:
-    if: github.repository != 'LearningOS/rCore-Camp-Code-2025S'
+    # if: github.repository != 'LearningOS/rCore-Camp-Code-2025S'
     name: Deploy to pages
     needs: basic-test
     runs-on: ubuntu-latest
