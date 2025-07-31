@@ -74,7 +74,7 @@ RUN rustup --version && \
     rustc --version
 
 # 2.3 Env
-RUN cargo install cargo-binutils; \
+RUN cargo install cargo-binutils --locked; \
     rustup target add riscv64gc-unknown-none-elf; \
 	rustup component add rust-src; \
 	rustup component add llvm-tools-preview; \
