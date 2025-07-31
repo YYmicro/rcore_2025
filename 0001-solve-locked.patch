@@ -1,0 +1,25 @@
+From 30bc82bd348bff9c2ae3151be42a1b591f8e7596 Mon Sep 17 00:00:00 2001
+From: YYmicro <yymicro1044566658@outlook.com>
+Date: Thu, 31 Jul 2025 12:25:58 +0800
+Subject: [PATCH] solve locked
+
+---
+ Makefile | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/Makefile b/Makefile
+index c3305c9..3e6fe83 100644
+--- a/Makefile
++++ b/Makefile
+@@ -38,7 +38,7 @@ endif
+ env:
+ ifeq ($(OFFLINE),)
+ 	(rustup target list | grep "riscv64gc-unknown-none-elf (installed)") || rustup target add riscv64gc-unknown-none-elf
+-	cargo install cargo-binutils
++	cargo install cargo-binutils --locked
+ 	rustup component add rust-src
+ 	rustup component add llvm-tools-preview
+ endif
+-- 
+2.39.5 (Apple Git-154)
+
